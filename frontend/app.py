@@ -81,7 +81,7 @@ if uploaded_file is not None:
     if st.button("Обработать"):
         files = {"file": uploaded_file.getvalue()}
 
-        response = requests.post("http://localhost:8000/clf_image", files=files)
+        response = requests.post("http://158.160.154.174:8000/clf_image", files=files)
 
         if response.status_code != 200:
             st.error("Ошибка backend")
