@@ -10,6 +10,18 @@ import cv2
 
 from utils.model_rubert import RubertClassifier
 from utils.model_yolo import YOLOFaceDetector
+import uvicorn
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # временно, можно ограничить позже
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 logger = logging.getLogger("uvicorn.info")
@@ -121,5 +133,4 @@ async def detect_face(file: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
