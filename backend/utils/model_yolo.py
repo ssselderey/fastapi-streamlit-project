@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import numpy as np
 
 class YOLOFaceDetector:
-    def __init__(self, model_path=r"C:\Users\327\Desktop\homeworks phase 3\fastapi-streamlit-project\backend\weights\best.pt"):
+    def __init__(self, model_path="/home/narana/weights/best.pt"):
         self.model = YOLO(model_path)
 
     def predict(self, img):

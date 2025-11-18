@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 # Указываем путь локальной модели
-MODEL_PATH = r"C:\Users\327\Desktop\homeworks phase 3\fastapi-streamlit-project\backend\weights\best_rubert_tiny"
+MODEL_PATH = "/home/narana/weights/best_rubert_tiny"
 
 class RubertClassifier:
     def __init__(self):
