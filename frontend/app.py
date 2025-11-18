@@ -5,7 +5,7 @@ import io
 
 
 
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = "http://158.160.154.174:8000"
 
 st.title("FastAPI + Streamlit")
 st.write("Классификация текста и изображений")
