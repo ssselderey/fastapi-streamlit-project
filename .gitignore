@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Venv
+backend_env/
+front_env/
+
+# Models
+*.pt
+*.bin
+*.safetensors
+
+# Streamlit cache
+frontend/.streamlit/
+
+# OS
+.DS_Store
